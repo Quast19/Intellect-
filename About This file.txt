@@ -1,0 +1,1 @@
+This is my Project called Group , where I use use Django to make a web application for me and my friends to have virtual rooms and group to study and chill
