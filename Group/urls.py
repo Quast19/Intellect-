@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path , include
 
 urlpatterns = [
-    path('',include('base.urls')),
+    path('',include('base.urls')), # for the app that has all the website things
+    path('api/' , include('base.api.urls')), #for the api access from the main
     path('admin/', admin.site.urls),
 ]
