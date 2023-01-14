@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>cooler one Websites</title>
+        <meta name="description" content="">
+        
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <h1>Kewl Rooms</h1>
+
+        <div id = "room-container" > 
+
+
+        </div>
+        
+    </body>
+    <script >
+        let roomsContainer = document.getElementById('room-container')
+
+        let getRooms = async () =>{
+            let response = await fetch('http://127.0.0.1:8000/api/rooms/') // wont work until we work on cor configuration
+
+            let rooms = await response.json()
+            for(let i = 0; i < rooms.length ; i++)
+            {
+                let room = rooms[i]
+                let row = `<div> 
+                    <h3> ${room.name}</h3>
+                </div>`
+                roomsContainer.innerHTML +=row
+            }
+        }
+        getRooms()
+    </script>
+</html>
