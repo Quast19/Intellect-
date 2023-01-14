@@ -1,0 +1,12 @@
+asgiref==3.6.0
+distlib==0.3.6
+Django==4.1.4
+django-cors-headers==3.13.0
+djangorestframework==3.14.0
+filelock==3.8.2
+numpy==1.24.0
+platformdirs==2.6.0
+pytz==2022.7
+sqlparse==0.4.3
+tzdata==2022.7
+virtualenv==20.17.1
