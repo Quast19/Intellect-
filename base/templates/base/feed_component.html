@@ -3,7 +3,7 @@
     <div class="roomListRoom__header">
       <a href="{% url 'user-profile' room.hosts.id %}" class="roomListRoom__author">
         <div class="avatar avatar--small">
-          <img src="https://randomuser.me/api/portraits/women/11.jpg" />
+          <img src="{{room.hosts.avatar.url}}" />
         </div>
         <span>@{{room.hosts.username}}</span>
       </a>

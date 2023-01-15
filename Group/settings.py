@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-t2g=n+0jdb0)eh=ewuh$5bv)b80gy8kb589ett#4y&=bth5)sp
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = []
 
 
 
@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     
     "corsheaders", #if any frontend website tries to acces my rooms through api , we need to set this corsheaders up
 ]
+
+AUTH_USER_MODEL = 'base.User'
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -130,11 +132,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-
+MEDIA_URL = '/images/'
 
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
+
+
+MEDIA_ROOT = BASE_DIR / 'static/images'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
